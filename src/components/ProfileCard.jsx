@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
 import { Card as MuiCard, CardContent, Avatar as MuiAvatar, Typography, Button as MuiButton } from '@mui/material';
+import './ProfileCard.css';
 
 // Material-UI Version
 export function ProfileCardMaterialUI() {
@@ -111,5 +112,41 @@ export function ProfileCardStyledComponents() {
       <StyledButton>Contact Me</StyledButton>
       <StyledFooter>Created with Styled-components</StyledFooter>
     </StyledCard>
+  );
+}
+
+// Vanilla CSS Version
+export function ProfileCardVanillaCSS() {
+  return (
+    <div className="profile-card">
+      <img src={logo} alt="avatar" className="profile-avatar" />
+      <h2 className="profile-name">Matti Meikäläinen</h2>
+      <p className="profile-description">
+        Full-stack developer, passionate about coding and coffee
+      </p>
+      <button className="profile-button">Contact Me</button>
+      <p className="profile-footer">Created with Vanilla CSS</p>
+    </div>
+  );
+}
+
+// Tailwind CSS Version
+export function ProfileCardTailwindCSS() {
+  return (
+    <div className="w-72 bg-gray-100 border border-gray-300 rounded-lg p-5 text-center mx-auto">
+      <img
+        src={logo}
+        alt="avatar"
+        className="w-24 h-24 rounded-full mx-auto"
+      />
+      <h2 className="text-lg font-bold text-black mt-3">Matti Meikäläinen</h2>
+      <p className="text-sm text-gray-600 mt-2">
+        Full-stack developer, passionate about coding and coffee
+      </p>
+      <button className="bg-blue-600 text-white rounded px-5 py-2 mt-5 hover:bg-blue-700">
+        Contact Me
+      </button>
+      <p className="text-xs text-gray-500 mt-3">Created with Tailwind CSS</p>
+    </div>
   );
 }
