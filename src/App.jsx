@@ -1,4 +1,3 @@
-import React from 'react';
 import AuthInputs from './components/AuthInputs.jsx';
 import Header from './components/Header.jsx';
 

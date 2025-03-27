@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 
 import Button from './Button.jsx';
@@ -34,6 +33,9 @@ export default function AuthInputs() {
           label="Email"
           invalid={emailNotValid}
           type="email"
+          // style={{
+          //   backgroundColor: emailNotValid ? '#fed2d2' : '#d1d5db'
+          // }}
           onChange={(event) => handleInputChange('email', event.target.value)}
         />
         <Input
