@@ -30,15 +30,16 @@ export default function AuthInputs() {
     >
       <div className="flex flex-col gap-2 mb-6">
         <Input
+          id="email"
+          name="email"
           label="Email"
           invalid={emailNotValid}
           type="email"
-          // style={{
-          //   backgroundColor: emailNotValid ? '#fed2d2' : '#d1d5db'
-          // }}
           onChange={(event) => handleInputChange('email', event.target.value)}
         />
         <Input
+          id="password"
+          name="password"
           invalid={passwordNotValid}
           label="Password"
           type="password"
