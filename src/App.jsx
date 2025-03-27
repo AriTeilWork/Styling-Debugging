@@ -14,10 +14,12 @@ export default function App() {
       <main>
         <div className="space-y-8">
           <AuthInputs />
-          <ProfileCardMaterialUI />
-          <ProfileCardStyledComponents />
-          <ProfileCardVanillaCSS />
-          <ProfileCardTailwindCSS />
+          <div className="grid grid-cols-2 gap-4 p-8">
+            <ProfileCardMaterialUI />
+            <ProfileCardStyledComponents />
+            <ProfileCardVanillaCSS />
+            <ProfileCardTailwindCSS />
+          </div>
         </div>
       </main>
     </>
