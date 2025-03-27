@@ -2,56 +2,19 @@ import React from 'react';
 
 export default function ProfileCard() {
   return (
-    <div style={styles.card}>
+    <div className="w-72 bg-gray-100 rounded-lg border border-gray-300 p-5 text-center">
       <img
         src="https://via.placeholder.com/100"
-        alt="Profile Avatar"
-        style={styles.avatar}
+        alt="avatar"
+        className="w-24 h-24 rounded-full mx-auto"
       />
-      <h2 style={styles.name}>John Doe</h2>
-      <p style={styles.description}>
-        A passionate developer who loves to create amazing applications.
+      <h2 className="text-lg font-bold text-black mt-4">Matti Meikäläinen</h2>
+      <p className="text-sm text-gray-600 mt-2">
+        Full-stack developer, passionate about coding and coffee
       </p>
-      <button style={styles.button}>Follow</button>
+      <button className="bg-blue-600 text-white w-30 rounded-md py-2 mt-5">
+        Contact Me
+      </button>
     </div>
   );
 }
-
-const styles = {
-  card: {
-    width: '300px',
-    backgroundColor: '#f5f5f5',
-    borderRadius: '8px',
-    border: '1px solid #e0e0e0',
-    padding: '20px',
-    textAlign: 'center',
-    boxSizing: 'border-box',
-  },
-  avatar: {
-    width: '100px',
-    height: '100px',
-    borderRadius: '50%',
-    margin: '0 auto',
-  },
-  name: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    color: '#000',
-    margin: '10px 0',
-  },
-  description: {
-    fontSize: '14px',
-    color: '#666',
-    margin: '10px 0',
-  },
-  button: {
-    backgroundColor: '#1976d2',
-    color: '#fff',
-    width: '120px',
-    borderRadius: '4px',
-    padding: '10px',
-    border: 'none',
-    cursor: 'pointer',
-    marginTop: '20px',
-  },
-};
