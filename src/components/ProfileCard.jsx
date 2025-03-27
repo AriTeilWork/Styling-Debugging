@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
 import { Card as MuiCard, CardContent, Avatar as MuiAvatar, Typography, Button as MuiButton } from '@mui/material';
@@ -42,6 +41,9 @@ export function ProfileCardMaterialUI() {
         >
           Contact Me
         </MuiButton>
+        <Typography variant="caption" display="block" sx={{ mt: 2, color: 'gray' }}>
+          Created with Material UI
+        </Typography>
       </CardContent>
     </MuiCard>
   );
@@ -92,6 +94,12 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledFooter = styled.p`
+  font-size: 12px;
+  color: gray;
+  margin-top: 10px;
+`;
+
 export function ProfileCardStyledComponents() {
   return (
     <StyledCard>
@@ -101,6 +109,7 @@ export function ProfileCardStyledComponents() {
         Full-stack developer, passionate about coding and coffee
       </StyledDescription>
       <StyledButton>Contact Me</StyledButton>
+      <StyledFooter>Created with Styled-components</StyledFooter>
     </StyledCard>
   );
 }
