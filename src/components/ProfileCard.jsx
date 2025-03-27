@@ -1,20 +1,59 @@
 import React from 'react';
-import './ProfileCard.css';
-export default function ProfileCard() {
-    return (
-      <div className="w-72 bg-gray-100 border border-gray-300 rounded-lg p-5 text-center mx-auto">
-        <img
-          src="https://via.placeholder.com/100"
-          alt="avatar"
-          className="w-24 h-24 rounded-full mx-auto"
-        />
-        <h2 className="text-lg font-bold text-black mt-3">Matti Meikäläinen</h2>
-        <p className="text-sm text-gray-600 mt-2">
-          Full-stack developer, passionate about coding and coffee
-        </p>
-        <button className="bg-blue-600 text-white rounded px-5 py-2 mt-5 hover:bg-blue-700">
-          Contact Me
-        </button>
-      </div>
-    );
+import styled from 'styled-components';
+
+const Card = styled.div`
+  width: 300px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+`;
+
+const Avatar = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+`;
+
+const Name = styled.h2`
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+`;
+
+const Description = styled.p`
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+`;
+
+const Button = styled.button`
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #1565c0;
   }
+`;
+
+export default function ProfileCard() {
+  return (
+    <Card>
+      <Avatar src="https://via.placeholder.com/100" alt="avatar" />
+      <Name>Matti Meikäläinen</Name>
+      <Description>
+        Full-stack developer, passionate about coding and coffee
+      </Description>
+      <Button>Contact Me</Button>
+    </Card>
+  );
+}
