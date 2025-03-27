@@ -24,12 +24,15 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <div className="controls">
         <p>
-          <label>Email</label>
-          <input
-            type="email"
-            className={emailNotValid ? 'invalid' : undefined}
-            onChange={(event) => handleInputChange('email', event.target.value)}
-          />
+        <label className="block mb-2 text-xs font-bold tracking-wide uppercase text-stone-300">
+          Email
+        </label>
+        <input
+          className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow bg-stone-300"
+          type="email"
+          value={enteredEmail}
+          onChange={(event) => handleInputChange('email', event.target.value)}
+        />
         </p>
         <p>
           <label>Password</label>
